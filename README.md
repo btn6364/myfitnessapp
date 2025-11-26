@@ -14,7 +14,7 @@ MyFitnessApp is created to help users take their fitness journey to the next lev
 - Product Management: Admins can add new products to the system, enriching food choices for users.
 
 ## API Endpoints
-The application exposes the following RESTful API endpoints: (may have an OpenAPI/Swagger documentation in future)
+The application exposes the following RESTful API endpoints. Access the OpenAPI documentation at: http://localhost:8080/v3/api-docs
 - `/api/v1/auth/register` - Register a new user account.
 - `/api/v1/auth/login` - User login to obtain JWT token.
 - `/api/v1/auth/logout` - User logout to invalidate JWT token.
