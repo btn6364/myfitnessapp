@@ -1,48 +1,48 @@
 # MyFitnessApp
 
-MyFitnessApp is created to help users take their fitness journey to the next level. The app is aimed to help users track workouts and caloric intakes.
+MyFitnessApp is designed to support users in elevating their fitness goals. It provides an easy way to track workouts and monitor daily calorie consumption.
 
 ## Features
 ### Authentication:
-- User Registration: A user can create an account by providing their information such as name, email, and password.
-- Authentication and Authorization: Each user will receive a JWT token after logging in. They will need to use it in the subsequent requests for authorization.
-- Role-Based Access Control: There are 2 roles in the system: Admin and User. Besides all the normal functionality of the users, an admin can add products to the system and managing user accounts.
+- User Registration: Users can sign up by entering basic details such as their name, email address, and password.
+- Authentication & Authorization: After logging in, each user receives a JWT token, which must be included in future requests for secure access.
+- Role-Based Access Control: The system includes two roles: Admin and User. Admins can perform all standard user actions, plus maintain product data and oversee user accounts.
 ### Fitness Tracking:
-- Workout Tracking: Users can track their workouts by recording the exercise intensity, type and total calories burned.
-- Calorie Tracking: Users can monitor their daily macros and calorie intake.
-- Food Catalog: Users can search for food items and add them to their food catalog.
-- Product Management: Admins can add new products to the system, enriching food choices for users.
+- Workout Tracking: Users can log workout sessions by noting exercise type, intensity, and total calories burned.
+- Calorie Tracking: Users can track their daily calorie intake and macronutrient distribution.
+- Food Catalog: Users can search for food items and save them to their personal food list.
+- Product Management: Admins have the ability to add new products, expanding the available food database for users.
 
 ## API Endpoints
-The application exposes the following RESTful API endpoints. Access the OpenAPI documentation at: http://localhost:8080/v3/api-docs
-- `/api/v1/auth/register` - Register a new user account.
-- `/api/v1/auth/login` - User login to obtain JWT token.
-- `/api/v1/auth/logout` - User logout to invalidate JWT token.
-- `/api/v1/user/` - CRUD operations for users
-- `/api/v1/admin/users` - Admin-only endpoint for managing user accounts.
-- `/api/v1/admin/products` - Admin-only endpoint for managing products.
+The application provides the following REST API routes. View the full OpenAPI specification at:
+http://localhost:8080/v3/api-docs
+- /api/v1/auth/register – Create a new user account.
+- /api/v1/auth/login – Log in and receive a JWT token.
+- /api/v1/auth/logout – Log out and invalidate the JWT token.
+- /api/v1/user/ – Perform CRUD operations on user entities.
+- /api/v1/admin/users – Admin-only route for managing user accounts.
+- /api/v1/admin/products – Admin-only route for managing product entries.
 
-## How to run the application
-Below are the steps to deploy the application using Docker:
+## How to Run the Application
+
+Follow the steps below to launch the application using Docker:
 ### Prerequisites
-Ensure the lastest Docker version is installed on your machine.
+Make sure you have the latest version of Docker installed.
 
 ### Instructions
-1. Clone the repository and navigate to the project directory
+Clone the repository and move into the project directory:
 ```
 git clone <project_url>
 cd fitness-tracking-app
 ```
-2. Build the Docker image:
+
+Build the Docker image:
 ```
 docker build -t fitness-app .
 ```
-3. Run Docker Compose to start the application:
+
+Use Docker Compose to start all services:
 ```
 docker-compose up
 ```
-This will start the MyFitnessApp, including the Spring Boot backend and the MongoDB database. Access the application at `http://localhost:8080`.
-
-
-
-
+This will launch MyFitnessApp along with the Spring Boot backend and MongoDB instance. You can access the application at http://localhost:8080.
